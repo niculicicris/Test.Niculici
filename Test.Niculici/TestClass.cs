@@ -4,7 +4,7 @@ public class TestClass
 {
     public static void DoSomething()
     {
-        Console.WriteLine("casdasd");
+        Console.WriteLine("test");
         Console.WriteLine("caof");
     }
     
