@@ -8,6 +8,6 @@ public class TestClass
         Console.WriteLine("caof");
     }
     
-    public void f() {}
+    public void fasd() {}
 
 }
