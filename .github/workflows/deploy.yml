@@ -9,7 +9,7 @@ env:
   PROJECT_PATH: "Test.Niculici/Test.Niculici.csproj"
   PACKAGE_OUTPUT_DIRECTORY: "${{ github.workspace }}/output"
   NUGET_SOURCE_URL: "https://nuget.pkg.github.com/niculicicris/index.json"
-  GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+  GITHUB_TOKEN: "${{ secrets.NUGET_AUTH_TOKEN }}"
 
 jobs:
   deploy:
