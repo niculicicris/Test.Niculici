@@ -1,5 +1,9 @@
 ﻿namespace Test.Niculici;
 
-public class Class1
+public class TestClass
 {
+    public static void DoSomething()
+    {
+        
+    }
 }
