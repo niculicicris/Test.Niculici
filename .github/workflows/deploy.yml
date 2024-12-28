@@ -20,17 +20,17 @@ jobs:
           fetch-depth: 0
       
       - name: "Run GitVersion"
-        uses: "gittools/actions/gitversion/execute@v3.1.1"
+        run: "dotnet-gitversion /output json /l console"
         id: "gitversion"
 
       - name: "Show version"
-        run: 'echo "NuGet Version: ${{ steps.gitversion.outputs.nugetversion }}"'
+        run: 'echo "NuGet Version: ${{ steps.gitversion.outputs.fullsemver }}"'
           
       - name: "Build project"
         run: "dotnet build ${{ env.PROJECT_PATH }} --configuration Release"
 
       - name: "Pack project"
-        run: "dotnet pack ${{ env.PROJECT_PATH }} --no-build --configuration Release -p:PackageVersion=${{ steps.gitversion.outputs.nugetversion }} --output ${{ env.PACKAGE_OUTPUT_DIRECTORY }}"
+        run: "dotnet pack ${{ env.PROJECT_PATH }} --no-build --configuration Release -p:PackageVersion=${{ steps.gitversion.outputs.fullsemver }} --output ${{ env.PACKAGE_OUTPUT_DIRECTORY }}"
 
       - name: "Push package"
         run: "dotnet nuget push ${{ env.PACKAGE_OUTPUT_DIRECTORY }}/*.nupkg --skip-duplicate -s ${{ env.NUGET_SOURCE_URL }} -k ${{ secrets.NUGET_AUTH_TOKEN }}"
