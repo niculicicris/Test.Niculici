@@ -16,6 +16,13 @@ jobs:
     steps:
       - name: "Checkout"
         uses: "actions/checkout@v2"
+
+      - name: "Run GitVersion"
+        uses: "gittools/actions/gitversion/execute@v6.1.0"
+        id: "gitversion"
+
+      - name: "Show version"
+        run: 'echo "NuGet Version: ${{ steps.gitversion.outputs.nugetversion }}"'
           
       - name: "Build project"
         run: "dotnet build ${{ env.PROJECT_PATH }} --configuration Release"
