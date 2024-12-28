@@ -5,13 +5,13 @@ branches:
     increment: "Patch"
     regex: "^main"
     prevent-increment:
-      of-merged-branch: true
+      of-merged-branch: false
     track-merge-target: true
   dev:
     increment: "Minor" 
     regex: "^dev"
     prevent-increment:
-      of-merged-branch: true
+      of-merged-branch: false
     track-merge-target: true
   feature:
     increment: "Minor"
