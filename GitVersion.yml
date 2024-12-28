@@ -4,7 +4,8 @@ branches:
   main:
     regex: "^main"
     increment: "None"
-    track-merge-target: false
+    track-merge-target: true
+    prevent-increment:
   dev:
     regex: "^dev"
     increment: "None"
