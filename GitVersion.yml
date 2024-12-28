@@ -8,11 +8,11 @@ branches:
     increment: "Minor" 
     regex: "^dev"
     track-merge-target: true
-  feature/*:
+  feature:
     increment: "Minor"
     regex: "^feature\/.*"
     source-branches: ["dev", "main"]
-  bug/*:
+  bug:
     increment: "Patch"
     regex: "^bug\/.*"
     source-branches: ["dev", "main"]
