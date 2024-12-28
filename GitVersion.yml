@@ -4,20 +4,10 @@ branches:
     increment: "Minor"
     regex: "main"
     track-merge-target: true
-    versioning-increments:
-      feature/*:
-        increment: "Minor" 
-      bug/*:
-        increment: "Patch"
   dev:
     increment: "Minor" 
     regex: "dev"
     track-merge-target: true
-    versioning-increments:
-      feature/*:
-        increment: "Minor" 
-      bug/*:
-        increment: "Patch"
   feature/*:
     increment: "Minor"
     regex: "feature\/.*"
