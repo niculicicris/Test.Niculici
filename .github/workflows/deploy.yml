@@ -21,7 +21,7 @@ jobs:
           fetch-depth: 0
       
       - name: "Run GitVersion"
-        run: "VERSION=$(dotnet-gitversion /output json | jq -r .MajorMinorPatch)"
+        run: 'echo "VERSION=$(dotnet-gitversion /output json | jq -r .MajorMinorPatch)" >> $GITHUB_ENV'
         id: "gitversion"
 
       - name: "Show version"
