@@ -1,19 +1,30 @@
 mode: "ContinuousDelivery"
 branches:
   main:
-    increment: "Minor"
+    increment: "None"
     regex: "main"
     track-merge-target: true
+    versioning-increments:
+      feature/*:
+        increment: "Minor" 
+      bug/*:
+        increment: "Patch"
   dev:
-    increment: "Minor"
+    increment: "None" 
     regex: "dev"
     track-merge-target: true
+    versioning-increments:
+      feature/*:
+        increment: "Minor" 
+      bug/*:
+        increment: "Patch"
   feature/*:
-    increment: "Minor" 
+    increment: "Minor"
     regex: "feature\/.*"
-    source-branches: ["dev"]      
+    source-branches: ["dev"]
     track-merge-target: true
   bug/*:
     increment: "Patch"
     regex: "bug\/.*"
     source-branches: ["dev"]
+    track-merge-target: true
