@@ -7,4 +7,7 @@ public class TestClass
         Console.WriteLine("testdsad");
         Console.WriteLine("test");
     }
+    
+    public void f() {}
+
 }
