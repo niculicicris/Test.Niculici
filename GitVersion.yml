@@ -4,10 +4,12 @@ branches:
     increment: "Minor"
     regex: "main"
     track-merge-target: true
+    prevent-increment-of-merged-branch-version: true
   dev:
     increment: "Minor" 
     regex: "dev"
     track-merge-target: true
+    prevent-increment-of-merged-branch-version: true
   feature/*:
     increment: "Minor"
     regex: "feature\/.*"
