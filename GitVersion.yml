@@ -3,20 +3,4 @@ next-version: "1.0.0"
 branches:
   main:
     regex: "^main"
-    prevent-increment:
-      of-merged-branch: false
-    track-merge-target: true
-  dev:
-    regex: "^dev"
-    prevent-increment:
-      of-merged-branch: false
-    track-merge-target: true
-  feature:
     increment: "Minor"
-    regex: "^feature\/.*"
-    source-branches: ["dev", "main"]
-    track-merge-target: true
-  bug:
-    increment: "Patch"
-    regex: "^bug\/.*"
-    source-branches: ["dev", "main"]
