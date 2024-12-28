@@ -17,6 +17,7 @@ branches:
     increment: "Minor"
     regex: "^feature\/.*"
     source-branches: ["dev", "main"]
+    track-merge-target: true
   bug:
     increment: "Patch"
     regex: "^bug\/.*"
