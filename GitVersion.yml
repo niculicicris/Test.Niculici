@@ -1,7 +1,7 @@
 mode: "ContinuousDelivery"
 branches:
   main:
-    increment: "None"
+    increment: "Minor"
     regex: "main"
     track-merge-target: true
     versioning-increments:
@@ -10,7 +10,7 @@ branches:
       bug/*:
         increment: "Patch"
   dev:
-    increment: "None" 
+    increment: "Minor" 
     regex: "dev"
     track-merge-target: true
     versioning-increments:
