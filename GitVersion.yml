@@ -3,4 +3,30 @@ next-version: "1.0.0"
 branches:
   main:
     regex: "^main"
+    increment: "None"
+    track-merge-target: false
+  dev:
+    regex: "^dev"
+    increment: "None"
+    track-merge-target: false
+  feature:
+    regex: "^feature\/.*"
     increment: "Minor"
+    track-merge-target: true
+    source-branches: ["main", "dev"]
+  refactor:
+    regex: "^refactor\/.*"
+    increment: "Patch"
+    track-merge-target: true
+    source-branches: ["main", "dev"]
+  documentation:
+    regex: "^docs\/.*"
+    increment: "None"
+    track-merge-target: false
+    source-branches: ["main", "dev"]
+  bug:
+    regex: "^bug\/.*"
+    increment: "Patch"
+    track-merge-target: true
+    source-branches: ["main", "dev"]
+  
