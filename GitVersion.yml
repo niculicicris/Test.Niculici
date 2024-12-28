@@ -3,13 +3,13 @@ next-version: "1.0.0"
 branches:
   main:
     regex: "^main"
-    increment: "None"
+    increment: "Inherit"
     track-merge-target: true
     prevent-increment:
   dev:
     regex: "^dev"
-    increment: "None"
-    track-merge-target: false
+    increment: "Inherit"
+    track-merge-target: true
   feature:
     regex: "^feature\/.*"
     increment: "Minor"
