@@ -1,0 +1,15 @@
+mode: "ContinuousDelivery"
+branches:
+  main:
+    increment: "Minor"
+    track-merge-target: true
+  dev:
+    increment: "Minor"
+    track-merge-target: true
+  feature/*:
+    increment: "Minor" 
+    source-branches: ["dev"]      
+    track-merge-target: true
+  bug/*:
+    increment: "Patch"
+    source-branches: ["dev"]
